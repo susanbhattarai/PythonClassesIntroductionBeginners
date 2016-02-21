@@ -1,0 +1,20 @@
+class Country(object):
+    def __init__(self, name, capital_city, population):
+        self.name = name
+        self.capital_city = capital_city
+        self.population = population
+
+    def __str__(self):
+        string = 'The capital city of ' + self.name + ' is ' + self.capital_city
+        return string
+
+    def bigger(self, other):
+        if self.population > other.population:
+            b = self.name + ' is bigger than ' + other.name
+        else:
+            b = other.name + ' is bigger than ' + self.name
+        return b
+
+   def __cmp__(self, other):
+        return bigger(self, other)
+    
