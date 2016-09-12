@@ -17,4 +17,8 @@ class Country(object):
 
    def __cmp__(self, other):
         return bigger(self, other)
+
+A  = Country("Nepal", "Kathmandu", 2000)
+B = Country("India", "Delhi", 100000)
+print bigger(A, B) # A.bigger(B) # A > B  # A > B # 
     
